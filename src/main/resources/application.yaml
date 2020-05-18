@@ -1,0 +1,12 @@
+boot:
+  captch:
+    enable: true
+  smscode:
+    enable: true
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.16.198.128:3306/security
+    username: root
+    password: tianxue
