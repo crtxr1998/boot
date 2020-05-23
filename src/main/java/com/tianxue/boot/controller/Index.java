@@ -6,10 +6,7 @@ import com.wf.captcha.base.Captcha;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,7 +20,7 @@ public class Index {
     @Autowired
     private PersistentTokenRepository tokenRepository;
 
-    @RequestMapping("/index")
+    @GetMapping("/index")
     public String hello(@RequestParam(required = false) String nameq) {
         return "hello: " + nameq;
     }
@@ -44,6 +41,8 @@ public class Index {
         tokenRepository.removeUserTokens(userInfo.getUsername());
         return userInfo.getUsername()+"退出";
     }
+
+
 
 
     @RequestMapping("/smsCode")

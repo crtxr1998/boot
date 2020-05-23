@@ -10,3 +10,16 @@ spring:
     url: jdbc:mysql://172.16.198.128:3306/security
     username: root
     password: tianxue
+  redis:
+    database: 0
+    host: 172.16.198.128
+
+logging:
+  level:
+    com.tianxue.boot: info
+
+security:
+  oauth2:
+    client:
+      client-id: security
+      client-secret: tianxue

@@ -36,7 +36,7 @@ public class SmsFilter extends OncePerRequestFilter {
                     && StringUtils.equalsIgnoreCase(HttpMethod.POST.name(), request.getMethod())) {
                 try {
                     logger.info("自定义短信验证逻辑");
-                    SmsCodeValidate(request);
+                    //SmsCodeValidate(request);
                 } catch (SmsCodeValidateException e) {
                     failureHandler.onAuthenticationFailure(request, response, e);
                     return;
