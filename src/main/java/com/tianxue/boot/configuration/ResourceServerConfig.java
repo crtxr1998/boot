@@ -16,7 +16,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  * @Date 2020/5/18 5:28 下午
  */
 @Configuration
-@EnableResourceServer
+@EnableResourceServer   //我是资源服务器
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     /**
      * 登录成功处理器
